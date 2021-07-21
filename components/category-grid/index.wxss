@@ -1,0 +1,33 @@
+.container{
+    height: 320rpx;
+    widows: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-container{
+    height: 300rpx;
+    width: 730rpx;
+    border: 1px dashed #DCEBE6;
+}
+
+.grid-item{
+    width: 150rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    height: 60rpx;
+    width: 60rpx;
+
+}
+
+.text {
+    margin-top: 6rpx;
+    font-size: 24rpx;
+    color: #333333;
+}
