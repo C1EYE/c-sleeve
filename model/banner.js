@@ -1,10 +1,18 @@
 import {Http} from "../utils/http";
 
-class Banner{
+class Banner {
     static locationB = 'b-1';
-    static async getHomeLocationB(){
+    static locationG = 'b-2';
+
+    static async getHomeLocationB() {
         return await Http.request({
-            url:`banner/name/${Banner.locationB}`
+            url: `banner/name/${Banner.locationB}`
+        })
+    }
+
+    static async getHomeLocationG() {
+        return await Http.request({
+            url: `banner/name/${Banner.locationG}`
         })
     }
 }
