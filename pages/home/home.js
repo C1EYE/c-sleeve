@@ -3,6 +3,7 @@ import {Theme} from "../../model/theme";
 import {Banner} from "../../model/banner";
 import {Category} from "../../model/category";
 import {Activity} from "../../model/activity";
+import {SpuPaging} from "../../model/spu-paging";
 
 Page({
 
@@ -13,11 +14,14 @@ Page({
         themeA: null,
         themeE: null,
         themeF: null,
+        themeH: null,
         bannerB: null,
         bannerG: null,
         grid: [],
         activityD: null,
-        waterFlowData: null
+        waterFlowData: null,
+        spuPaging: null,
+        loadingType: 'loading'
     },
 
     /**
@@ -25,6 +29,18 @@ Page({
      */
     onLoad: async function (options) {
         await this.initAllData();
+        await this.initBottomSpuList();
+    },
+
+    async initBottomSpuList() {
+        const paging = await SpuPaging.getLatestPaging();
+        this.data.spuPaging = paging;
+        const data = await paging.getMoreData();
+        if (!data) {
+            return
+        }
+        //加载第一页
+        wx.lin.renderWaterFlow(data.items);
     },
 
     async initAllData() {
@@ -33,6 +49,7 @@ Page({
         const themeA = await theme.getHomeLocationA();
         const themeE = await theme.getHomeLocationE();
         const themeF = await theme.getHomeLocationF();
+        const themeH = await theme.getHomeLocationH();
         let themeESpu = [];
         if (themeE.online) {
             const data = await Theme.getHomeLocationESpu();
@@ -45,60 +62,34 @@ Page({
         const bannerG = await Banner.getHomeLocationG();
         const grid = await Category.getHomeLocationsC();
         const activityD = await Activity.getHomeLocationD();
-        const waterFLowData = {};
         this.setData({
             themeA,
             themeE,
             themeF,
+            themeH,
             themeESpu,
             bannerB,
             bannerG,
             grid,
             activityD,
-            waterFLowData
         });
     },
 
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function () {
-
+    onReachBottom: async function () {
+        const data = await this.data.spuPaging.getMoreData();
+        if (!data) {
+            return
+        }
+        wx.lin.renderWaterFlow(data.items);
+        if (!data.moreData) {
+            this.setData({
+                loadingType: 'end'
+            })
+        }
     },
 
     /**

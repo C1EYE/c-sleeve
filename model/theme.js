@@ -19,6 +19,10 @@ class Theme {
         return this.themes.find(t => t.name === Theme.locationF);
     }
 
+    async getHomeLocationH() {
+        return this.themes.find(t => t.name === Theme.locationH);
+    }
+
     async getThemes() {
         const names = `${Theme.locationA},${Theme.locationE},${Theme.locationF},${Theme.locationH}`
         this.themes = await Http.request({

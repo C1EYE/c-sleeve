@@ -1,7 +1,6 @@
 {
   "usingComponents": {
     "s-category-grid": "/components/category-grid/index",
-    "s-water-flow": "/components/water-flow/index",
     "s-spu-scroll": "/components/spu-group/index",
     "s-hot-list": "/components/hot-list/index"
   }
