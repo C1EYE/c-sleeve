@@ -2,18 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820ca3fc-d038-40ac-97cc-a452bf61973c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/sleeve.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/home/title@home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/spu-paging.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/paging.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wxs/price.wxs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/cell/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/cell/index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/cell/index.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/cell/index.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/fence/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/fence/index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/fence/index.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/fence/index.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/models/cell.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/models/fence-group.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/models/fence.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/models/judger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/models/matrix.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/models/sku-code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/models/sku-pending.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/realm/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/realm/index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/realm/index.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/realm/index.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/enum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/spu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/joiner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/category-grid/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/category-grid/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/spu-group/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/spu-group/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/spu-preview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/spu-preview/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/spu-preview/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/spu-preview/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/activity.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/activity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/spu-paging.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/spu-paging.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/theme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home/home.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/home.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/home/home.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/home.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home/home.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/home.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/util.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +47,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Wechat mini program page js file(Page API)" />
+        <option value="Wechat mini program page json file(Page API)" />
+        <option value="Wechat mini program component js file" />
+        <option value="Wechat mini program component json file" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -57,6 +85,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/models" />
       <recent name="$PROJECT_DIR$/imgs/home" />
       <recent name="$PROJECT_DIR$/components" />
     </key>
@@ -84,7 +113,7 @@
       <workItem from="1626073167827" duration="8505000" />
       <workItem from="1626173747990" duration="14216000" />
       <workItem from="1626575753876" duration="13395000" />
-      <workItem from="1626866781912" duration="35263000" />
+      <workItem from="1626866781912" duration="69180000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1626873492866</created>
@@ -107,7 +136,21 @@
       <option name="project" value="LOCAL" />
       <updated>1627300532729</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="water-flow">
+      <created>1627473583528</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1627473583529</updated>
+    </task>
+    <task id="LOCAL-00005" summary="water-flow">
+      <created>1627473604222</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1627473604222</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,22 +160,28 @@
     <MESSAGE value="init" />
     <MESSAGE value="spu-group" />
     <MESSAGE value="hot-list" />
-    <option name="LAST_COMMIT_MESSAGE" value="hot-list" />
+    <MESSAGE value="water-flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="water-flow" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1443" y="200" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626079160639">
-      <screen x="1440" y="-421" width="1080" height="1920" />
+    <state x="1443" y="119" width="1073" height="702" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628519344461">
+      <screen x="1440" y="-502" width="1080" height="1920" />
     </state>
+    <state x="1443" y="119" width="1073" height="702" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1628519344461" />
     <state x="1443" y="200" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.-421.1080.1920/0.0.1440.900/-1080.-442.1080.1920@1440.-421.1080.1920" timestamp="1626079160639" />
-    <state x="1792" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1627289226970">
+    <state x="1792" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1628587691240">
       <screen x="1440" y="-502" width="1080" height="1920" />
     </state>
-    <state x="1792" y="180" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1627289226970" />
-    <state x="1556" y="-44" key="CommitChangelistDialog2" timestamp="1627300532331">
+    <state x="1792" y="180" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1628587691240" />
+    <state x="1717" y="211" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1627539848278">
       <screen x="1440" y="-502" width="1080" height="1920" />
     </state>
-    <state x="1556" y="-44" key="CommitChangelistDialog2/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1627300532331" />
+    <state x="1717" y="211" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1627539848278" />
+    <state x="1556" y="-44" key="CommitChangelistDialog2" timestamp="1627473604006">
+      <screen x="1440" y="-502" width="1080" height="1920" />
+    </state>
+    <state x="1556" y="-44" key="CommitChangelistDialog2/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1627473604006" />
     <state x="1529" y="203" key="GrepConsoleSettings" timestamp="1626089459482">
       <screen x="1440" y="-421" width="1080" height="1920" />
     </state>
@@ -166,18 +215,22 @@
     </state>
     <state x="1480" y="97" key="SettingsEditor/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1627461608905" />
     <state x="1480" y="178" key="SettingsEditor/1440.-421.1080.1920/0.0.1440.900/-1080.-442.1080.1920@1440.-421.1080.1920" timestamp="1626173721028" />
-    <state x="1566" y="189" key="Vcs.Push.Dialog.v2" timestamp="1627289044462">
+    <state x="1566" y="189" key="Vcs.Push.Dialog.v2" timestamp="1627473608145">
       <screen x="1440" y="-502" width="1080" height="1920" />
     </state>
-    <state x="1566" y="189" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1627289044462" />
-    <state x="1777" y="378" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1627371156741">
+    <state x="1566" y="189" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1627473608145" />
+    <state x="1777" y="378" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1627545319815">
       <screen x="1440" y="-502" width="1080" height="1920" />
     </state>
-    <state x="1777" y="378" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1627371156741" />
-    <state x="1643" y="-53" width="672" height="678" key="search.everywhere.popup" timestamp="1627453971031">
+    <state x="1777" y="378" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1627545319815" />
+    <state x="1644" y="213" key="run.anything.popup" timestamp="1628681542998">
       <screen x="1440" y="-502" width="1080" height="1920" />
     </state>
-    <state x="1643" y="-53" width="672" height="678" key="search.everywhere.popup/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1627453971031" />
+    <state x="1644" y="213" key="run.anything.popup/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1628681542998" />
+    <state x="1643" y="-53" width="672" height="678" key="search.everywhere.popup" timestamp="1628666789697">
+      <screen x="1440" y="-502" width="1080" height="1920" />
+    </state>
+    <state x="1643" y="-53" width="672" height="678" key="search.everywhere.popup/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1628666789697" />
     <state x="1643" y="28" key="search.everywhere.popup/1440.-421.1080.1920/0.0.1440.900/-1080.-442.1080.1920@1440.-421.1080.1920" timestamp="1625753467910" />
   </component>
 </project>

@@ -40,5 +40,11 @@ Component({
         //         h:340*height/width
         //     })
         // }
+        onItemTap(event) {
+            const pid = event.currentTarget.dataset.pid;
+            wx.navigateTo({
+                url: `/pages/detail/detail?pid=${pid}`
+            })
+        }
     }
 })

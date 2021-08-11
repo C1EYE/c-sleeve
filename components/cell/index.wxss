@@ -1,0 +1,35 @@
+.inner-container {
+    height: 100%;
+    padding-right: 15rpx;
+    padding-left: 15rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;
+
+}
+
+.container {
+    height: 60rpx;
+    border: 2rpx solid #333333;
+    padding: 2rpx;
+    box-sizing: border-box;
+}
+
+.forbidden {
+    border: 2rpx dashed #bbbbbb;
+    color: #bbbbbb;
+}
+
+.s-outer {
+    border: 2rpx solid #157658;
+    color: #ffffff;
+}
+
+.s-inner {
+    background-color: #157658;
+}
+
+.selected {
+
+}
