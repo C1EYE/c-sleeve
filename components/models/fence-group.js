@@ -11,6 +11,33 @@ class FenceGroup {
         this.skuList = spu.sku_list;
     }
 
+    getDefaultSku() {
+        const defaultSkuId = this.spu.default_sku_id;
+        if (!defaultSkuId) {
+            return;
+        }
+        return this.skuList.find(s => s.id === defaultSkuId);
+    }
+
+    setCellStatusByID(cellId, status) {
+        this.eachCell((cell) => {
+            if (cell.id === cellId) {
+                cell.status = status;
+            }
+        })
+    }
+
+    setCellStatusByXY(x, y, status) {
+        this.fences[x].cells[y].status = status;
+    }
+
+    getSku(skuCode) {
+        const fullSkuCode = this.spu.id + '$' + skuCode
+        console.log(fullSkuCode)
+        const sku = this.spu.sku_list.find(s => s.code === fullSkuCode)
+        return sku ? sku : null;
+    }
+
     initFences() {
         const matrix = this._createMatrix(this.skuList);
         const fences = [];
