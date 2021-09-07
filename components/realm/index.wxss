@@ -62,3 +62,37 @@
 .sku-pending > text:nth-child(2) {
     color: #666666;
 }
+
+.counter-container {
+    margin-top: 34rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 200rpx;
+}
+
+.counter-container {
+    color: #555555;
+    font-size: 24rpx;
+}
+
+.bottom-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100rpx;
+    background-color: #333333;
+    position: absolute;
+    bottom: 0;
+}
+
+.out-stock {
+    background-color: #DCEBE6;
+}
+
+.bottom-btn text {
+    color: #ffffff;
+}

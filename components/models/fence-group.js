@@ -33,7 +33,7 @@ class FenceGroup {
 
     getSku(skuCode) {
         const fullSkuCode = this.spu.id + '$' + skuCode
-        console.log(fullSkuCode)
+        // console.log(fullSkuCode)
         const sku = this.spu.sku_list.find(s => s.code === fullSkuCode)
         return sku ? sku : null;
     }

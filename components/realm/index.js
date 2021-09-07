@@ -2,6 +2,7 @@ import {FenceGroup} from "../models/fence-group";
 import {Judger} from "../models/judger";
 import {Spu} from "../../models/spu";
 import {Cell} from "../models/cell";
+import {Cart} from "../../models/cart";
 
 Component({
     properties: {
@@ -15,7 +16,9 @@ Component({
         discountPrice: Number,
         stock: Number,
         noSpec: Boolean,
-        SkuIntact: Boolean
+        SkuIntact: Boolean,
+        currentSkuCount: Cart.SKU_MIN_COUNT,
+        outStock: Boolean
     },
     lifetimes: {
         attached() {
@@ -24,10 +27,13 @@ Component({
     ,
     methods: {
         processNoSPec(spu) {
+
             this.setData({
+                stock: spu.sku_list[0].stock,
                 noSpec: true,
             })
             this.bindSkuData(spu.sku_list[0])
+            this.setStockStatus(spu.sku_list[0].stock, this.data.currentSkuCount)
         },
         processHasPec(spu) {
             const fencesGroup = new FenceGroup(spu);
@@ -37,6 +43,7 @@ Component({
             const defaultSku = fencesGroup.getDefaultSku();
             if (defaultSku) {
                 this.bindSkuData(defaultSku)
+                this.setStockStatus(defaultSku.stock, this.data.currentSkuCount)
             } else {
                 this.bindSpuData()
             }
@@ -64,8 +71,8 @@ Component({
             const skuIntact = judger.isSkuIntact();
             if (skuIntact) {
                 const currentSku = judger.getDeterminateSku()
-                if (currentSku)
-                    this.bindSkuData(currentSku)
+                this.bindSkuData(currentSku)
+                this.setStockStatus(currentSku.stock, this.data.currentSkuCount)
             }
             this.bindTipData()
             this.bindFenceGroupData(judger.fenceGroup);
@@ -95,6 +102,31 @@ Component({
                 missingKeys: this.data.judger.getMissingKeys()
 
             })
+        },
+
+        onSelectCount(event) {
+            const currentCount = event.detail.count
+            this.data.currentSkuCount = currentCount
+            console.log(this.data.judger)
+            if (this.data.noSpec) {
+                this.setStockStatus(this.data.stock, currentCount)
+            } else if (this.data.judger.isSkuIntact()) {
+                const sku = this.data.judger.getDeterminateSku()
+                this.setStockStatus(sku.stock, currentCount)
+            }
+        },
+
+        setStockStatus(stock, currentStock) {
+            console.log(stock, currentStock)
+            const setStock = this.isOutOfStock(stock, currentStock)
+            console.log(setStock)
+            this.setData({
+                outStock: setStock
+            })
+        },
+
+        isOutOfStock(stock, currentCount) {
+            return stock < currentCount
         }
     },
     observers: {
