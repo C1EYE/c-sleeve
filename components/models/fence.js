@@ -29,9 +29,20 @@ class Fence {
         })
     }
 
-    // pushValueTitle(title){
-    //     this.valueTitles.push(title)
-    // }
+    setFenceSketch(skuList) {
+        this.cells.forEach(c => {
+            this._setCellSkuImg(c, skuList)
+        })
+    }
+
+    _setCellSkuImg(cell, skuList) {
+        const specCode = cell.getCellCode()
+        const matchedSku = skuList.find(s => s.code.includes(specCode))
+        if (matchedSku) {
+            cell.skuImg = matchedSku.img;
+        }
+    }
+
 }
 
 export {

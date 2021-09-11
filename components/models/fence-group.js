@@ -33,7 +33,6 @@ class FenceGroup {
 
     getSku(skuCode) {
         const fullSkuCode = this.spu.id + '$' + skuCode
-        // console.log(fullSkuCode)
         const sku = this.spu.sku_list.find(s => s.code === fullSkuCode)
         return sku ? sku : null;
     }
@@ -61,10 +60,29 @@ class FenceGroup {
         AT.forEach(row => {
             const fence = new Fence(row);
             fence.init();
+            if (this._hasSketchFence() && this._isSketchFence(fence.id)) {
+                fence.setFenceSketch(this.skuList)
+            }
             fences.push(fence);
         })
         this.fences = fences;
+    }
 
+    /**
+     * 判断是否为可视规格
+     * @private
+     */
+    _isSketchFence(fenceId) {
+        // console.log(fenceId,this.spu.sketch_spec_id)
+        return this.spu.sketch_spec_id === fenceId
+    }
+
+    /**
+     * 判断是否有可视规格
+     * @private
+     */
+    _hasSketchFence() {
+        return this.spu.sketch_spec_id ? true : false;
     }
 
     eachCell(callback) {

@@ -1,0 +1,25 @@
+<view class="header">
+    <l-search-bar placeholder="输入商品名称"
+                  maxlength="9"
+                  bg-color="#f1f1f1"
+                  l-clas="input"
+    >
+    </l-search-bar>
+</view>
+<view class="container">
+    <view>
+        <view class="history-container">
+            <view class="history-title">
+                <view class="slide"></view>
+                <text>历史搜索</text>
+                <view>
+                    <l-icon></l-icon>
+                </view>
+            </view>
+            <view class="history-tags">
+
+            </view>
+        </view>
+
+    </view>
+</view>

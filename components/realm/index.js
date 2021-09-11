@@ -50,11 +50,6 @@ Component({
             this.bindFenceGroupData(fencesGroup);
             this.bindTipData()
         },
-        // bindInitData(fenceGroup) {
-        //     this.setData({
-        //         fences: fenceGroup.fences,
-        //     })
-        // },
         bindFenceGroupData(fenceGroup) {
             this.setData({
                 fences: fenceGroup.fences
@@ -76,6 +71,7 @@ Component({
             }
             this.bindTipData()
             this.bindFenceGroupData(judger.fenceGroup);
+            this.triggerSpecEvent()
         },
         bindSpuData() {
             const spu = this.properties.spu;
@@ -116,10 +112,24 @@ Component({
             }
         },
 
+        triggerSpecEvent() {
+            const noSpec = Spu.isNoSpec(this.properties.spu)
+            if (noSpec) {
+                this.triggerEvent('specchange', {
+                    noSpec
+                })
+            } else {
+                this.triggerEvent('specchange', {
+                    noSpec: Spu.isNoSpec(this.properties.spu),
+                    SkuIntact: this.data.judger.isSkuIntact(),
+                    currentValues: this.data.judger.getCurrentValues(),
+                    missingKeys: this.data.judger.getMissingKeys()
+                })
+            }
+        },
+
         setStockStatus(stock, currentStock) {
-            console.log(stock, currentStock)
             const setStock = this.isOutOfStock(stock, currentStock)
-            console.log(setStock)
             this.setData({
                 outStock: setStock
             })
@@ -140,6 +150,7 @@ Component({
             } else {
                 this.processHasPec(spu)
             }
+            this.triggerSpecEvent()
         }
     }
 });
