@@ -4,8 +4,8 @@
     <image class="title" src="{{theme.title_img}}"></image>
     <scroll-view scroll-x class="scroll-view">
         <view class="inner">
-            <block wx:for="{{spuList}}" wx:key="index">
-                <view class="spu-container">
+            <block wx:for="{{spuList}}" wx:key="{{item.id}}">
+                <view class="spu-container" bind:tap="onTap" data-pid="{{item.id}}">
                     <image class="spu-img" src="{{item.img}}"></image>
                     <text class="spu-text">{{item.title.length >= 8 ? s.substring(item.title, 0, 7) + '...' : item.title}}</text>
                     <l-price l-unit-class="price-unit"

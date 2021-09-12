@@ -3,23 +3,55 @@
                   maxlength="9"
                   bg-color="#f1f1f1"
                   l-clas="input"
+                  bind:linconfirm="onSearch"
+                  bind:lincancel="onCancel"
     >
     </l-search-bar>
 </view>
 <view class="container">
-    <view>
-        <view class="history-container">
+    <view wx:if="{{!search}}">
+        <view class="history-container" wx:if="{{historyTags.length>0}}">
             <view class="history-title">
                 <view class="slide"></view>
                 <text>历史搜索</text>
-                <view>
-                    <l-icon></l-icon>
+                <view style="flex:1"></view>
+                <view bind:tap="onDelete" class="icon">
+                    <l-icon name="delete" color="#999999" size="32"></l-icon>
                 </view>
             </view>
             <view class="history-tags">
-
+                <block wx:for="{{historyTags}}" wx:key="index">
+                    <l-tag bind:lintap="onSearch" l-class="tag" name="{{item}}">
+                        {{item}}
+                    </l-tag>
+                </block>
             </view>
         </view>
-
+        <view class="history-container">
+            <view class="history-title">
+                <view class="slide"></view>
+                <text>热门搜索</text>
+                <view style="flex:1"></view>
+            </view>
+            <view class="history-tags">
+                <block wx:for="{{hotTags}}" wx:key="index">
+                    <l-tag bind:lintap="onSearch" select="{{item.highlight}}" l-class="tag" name="{{item.title}}"
+                           l-select-class="tag-selected">
+                        {{item.title}}
+                    </l-tag>
+                </block>
+            </view>
+        </view>
     </view>
+    <view wx:else>
+        <l-loadmore show end-text="-- 到头了 --" loadingText="-- 加载中 --" type="{{loadingType}}">
+            <view slot="content" hidden="{{!search}}" class="spu-bottom">
+                <block wx:for="{{items}}" wx:key="index">
+                    <s-spu-preview-r data="{{item}}"></s-spu-preview-r>
+                </block>
+            </view>
+        </l-loadmore>
+    </view>
+    <l-loading></l-loading>
+
 </view>

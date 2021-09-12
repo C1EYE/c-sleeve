@@ -1,64 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="820ca3fc-d038-40ac-97cc-a452bf61973c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/sale-explain/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sale-explain/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sale-explain/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sale-explain/index.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/spu-description/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/spu-description/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/spu-description/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/spu-description/index.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sub-category/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sub-category/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sub-category/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sub-category/index.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/tab-bar/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/tab-bar/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/tab-bar/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/tab-bar/index.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/categories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/sale-explain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/cart/cart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/cart/cart.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/cart/cart.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/cart/cart.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/category/category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/category/category.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/category/category.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/category/category.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/my/my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/my/my.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/my/my.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/my/my.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/search/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/search/search.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/search/search.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/search/search.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/spu-list/spu-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/spu-list/spu-list.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/spu-list/spu-list.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/spu-list/spu-list.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/system.js" afterDir="false" />
+    <list default="true" id="820ca3fc-d038-40ac-97cc-a452bf61973c" name="Default Changelist" comment="完成详情和分类目录">
+      <change afterPath="$PROJECT_DIR$/components/spu-preview-r/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/spu-preview-r/index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/spu-preview-r/index.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/spu-preview-r/index.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/history-keyword.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/tag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/ui.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cell/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/cell/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cell/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/components/cell/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/models/cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/models/cell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/models/fence-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/models/fence-group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/models/fence.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/models/fence.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/realm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/realm/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/realm/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/realm/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/realm/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/components/realm/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/enum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/detail/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/detail/detail.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail/detail.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/detail/detail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail/detail.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/detail/detail.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail/detail.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.private.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.private.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/spu-group/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/spu-group/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/spu-group/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/spu-group/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search/search.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/search.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search/search.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/search.wxss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +26,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="Wechat mini program component js file" />
-        <option value="Wechat mini program component json file" />
         <option value="Wechat mini program page js file(Page API)" />
         <option value="Wechat mini program page json file(Page API)" />
+        <option value="Wechat mini program component js file" />
+        <option value="Wechat mini program component json file" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -138,7 +96,7 @@
       <workItem from="1626866781912" duration="71290000" />
       <workItem from="1628774562775" duration="11082000" />
       <workItem from="1629390515269" duration="2541000" />
-      <workItem from="1630936041013" duration="72351000" />
+      <workItem from="1630936041013" duration="95072000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1626873492866</created>
@@ -196,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631025754506</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="完成详情和分类目录">
+      <created>1631345083609</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1631345083609</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +175,8 @@
     <MESSAGE value="sku选择" />
     <MESSAGE value="可算把sku完事啦！" />
     <MESSAGE value="完成无货逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成无货逻辑" />
+    <MESSAGE value="完成详情和分类目录" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成详情和分类目录" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -236,11 +202,11 @@
     </state>
     <state x="1717" y="211" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1627539848278" />
     <state x="1717" y="713" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1080.1920@1440.0.1080.1920" timestamp="1631113057400" />
-    <state x="1556" y="458" key="CommitChangelistDialog2" timestamp="1631170470686">
+    <state x="1556" y="458" key="CommitChangelistDialog2" timestamp="1631345083332">
       <screen x="1440" y="0" width="1080" height="1920" />
     </state>
     <state x="1556" y="-44" key="CommitChangelistDialog2/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1628681643181" />
-    <state x="1556" y="458" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1080.1920@1440.0.1080.1920" timestamp="1631170470686" />
+    <state x="1556" y="458" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1080.1920@1440.0.1080.1920" timestamp="1631345083332" />
     <state x="1529" y="203" key="GrepConsoleSettings" timestamp="1626089459482">
       <screen x="1440" y="-421" width="1080" height="1920" />
     </state>
@@ -276,10 +242,11 @@
     <state x="1440" y="599" width="1080" height="897" key="SettingsEditor/0.0.1440.900/1440.0.1080.1920@1440.0.1080.1920" timestamp="1631236064213" />
     <state x="1440" y="599" key="SettingsEditor/0.23.1440.877/1440.0.1080.1920@1440.0.1080.1920" timestamp="1631071477883" />
     <state x="1480" y="178" key="SettingsEditor/1440.-421.1080.1920/0.0.1440.900/-1080.-442.1080.1920@1440.-421.1080.1920" timestamp="1626173721028" />
-    <state x="1566" y="189" key="Vcs.Push.Dialog.v2" timestamp="1628681646823">
-      <screen x="1440" y="-502" width="1080" height="1920" />
+    <state x="1518" y="691" key="Vcs.Push.Dialog.v2" timestamp="1631345135750">
+      <screen x="1440" y="0" width="1080" height="1920" />
     </state>
     <state x="1566" y="189" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1080.-523.1080.1920/1440.-502.1080.1920@1440.-502.1080.1920" timestamp="1628681646823" />
+    <state x="1518" y="691" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1080.1920@1440.0.1080.1920" timestamp="1631345135750" />
     <state x="1777" y="378" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1627545319815">
       <screen x="1440" y="-502" width="1080" height="1920" />
     </state>
