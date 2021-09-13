@@ -35,7 +35,7 @@
 </scroll-view>
 
 <l-popup orderWay="{{orderWay}}" show="{{showRealm}}" contentAlign="bottom">
-    <s-realm bind:specchange="onSpecChange" spu="{{spu}}"></s-realm>
+    <s-realm bind:shopping="onShopping" bind:specchange="onSpecChange" spu="{{spu}}" orderWay="{{orderWay}}"></s-realm>
 </l-popup>
 
 <s-tabbar class="tabbar"

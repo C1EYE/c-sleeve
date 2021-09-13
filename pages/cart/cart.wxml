@@ -1,0 +1,5 @@
+<view wx:if="!isEmpty" class="container">
+    <block wx:wx:for="{{cartitems}}">
+        <s-cart-item bind:overflow="onOverflow" bind:itemdelete="onItemDelete"></s-cart-item>
+    </block>
+</view>

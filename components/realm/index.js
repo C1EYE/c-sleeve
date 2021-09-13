@@ -7,6 +7,7 @@ import {Cart} from "../../models/cart";
 Component({
     properties: {
         spu: Object,
+        orderWay: String
     },
     data: {
         judger: Object,
@@ -18,11 +19,10 @@ Component({
         noSpec: Boolean,
         SkuIntact: Boolean,
         currentSkuCount: Cart.SKU_MIN_COUNT,
-        outStock: Boolean
+        outStock: Boolean,
     },
     lifetimes: {
-        attached() {
-        }
+
     }
     ,
     methods: {
@@ -103,12 +103,14 @@ Component({
         onSelectCount(event) {
             const currentCount = event.detail.count
             this.data.currentSkuCount = currentCount
-            console.log(this.data.judger)
-            if (this.data.noSpec) {
-                this.setStockStatus(this.data.stock, currentCount)
-            } else if (this.data.judger.isSkuIntact()) {
-                const sku = this.data.judger.getDeterminateSku()
-                this.setStockStatus(sku.stock, currentCount)
+            if (this.noSpec()) {
+                this.setStockStatus(this.getNoSpecSku().stock, currentCount)
+                return
+            } else {
+                if (this.data.judger.isSkuIntact()) {
+                    const sku = this.data.judger.getDeterminateSku()
+                    this.setStockStatus(sku.stock, currentCount)
+                }
             }
         },
 
@@ -128,6 +130,50 @@ Component({
             }
         },
 
+        onBuyOrCart(event) {
+            if (Spu.isNoSpec(this.properties.spu)) {
+                this.shoppingNoSpec()
+            } else {
+                this.shoppingVarious()
+            }
+        },
+
+        shoppingVarious() {
+            const intact = this.data.judger.isSkuIntact()
+            if (!intact) {
+                const missKeys = this.data.judger.getMissingKeys()
+                wx.showToast({
+                    icon: "none",
+                    title: `请选择:${missKeys.join(',')}`,
+                    duration: 3000
+                })
+                return
+            }
+            this._triggerShoppingEvent(this.data.judger.getDeterminateSku())
+        },
+
+        shoppingNoSpec() {
+            this._triggerShoppingEvent(this.getNoSpecSku())
+        },
+
+        getNoSpecSku() {
+            return this.properties.spu.sku_list[0]
+        },
+
+        noSpec() {
+            const spu = this.properties.spu
+            return Spu.isNoSpec(spu);
+        },
+
+        _triggerShoppingEvent(sku) {
+            this.triggerEvent('shopping', {
+                orderWay: this.properties.orderWay,
+                spuId: this.properties.spu.id,
+                sku: sku,
+                skuCount: this.data.currentSkuCount
+            })
+        },
+
         setStockStatus(stock, currentStock) {
             const setStock = this.isOutOfStock(stock, currentStock)
             this.setData({
@@ -144,7 +190,6 @@ Component({
             if (!spu) {
                 return
             }
-            // console.log(spu)
             if (Spu.isNoSpec(spu)) {
                 this.processNoSPec(spu)
             } else {

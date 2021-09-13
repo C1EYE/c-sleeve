@@ -1,5 +1,9 @@
 Component({
     properties: {},
     data: {},
-    methods: {}
+    methods: {
+        onLoad: function () {
+
+        }
+    }
 });

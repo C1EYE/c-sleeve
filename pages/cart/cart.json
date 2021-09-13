@@ -1,5 +1,6 @@
 {
   "component": true,
   "usingComponents": {
+    "s-cart-item": "../../components/cart-item/index"
   }
 }
