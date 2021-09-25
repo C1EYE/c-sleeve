@@ -3,6 +3,8 @@ import {Spu} from "../../models/spu";
 import {ShoppingWay} from "../../core/enum";
 import {SaleExplain} from "../../models/sale-explain";
 import {getWindowHeightRpx} from "../../utils/system";
+import {Cart} from "../../models/cart";
+import {CartItem} from "../../models/cart-item";
 
 Page({
 
@@ -28,6 +30,7 @@ Page({
             explain,
             h
         })
+        this.updateCartItemCount()
 
     },
     onAddToCart(event) {
@@ -61,13 +64,25 @@ Page({
         })
     },
 
+    updateCartItemCount() {
+        const cart = new Cart()
+        this.setData({
+            cartItemCount: cart.getCartItemCount(),
+            showRealm: false
+        })
+
+    },
+
     onShopping(event) {
         const chosenSku = event.detail.sku;
         const skuCount = event.detail.skuCount
         const orderWay = event.detail.orderWay
 
         if (orderWay === ShoppingWay.CART) {
-            console.log('ALG')
+            const cart = new Cart()
+            const cartItem = new CartItem(chosenSku, skuCount)
+            cart.addItem(cartItem)
+            this.updateCartItemCount()
         }
     }
 })

@@ -1,5 +1,8 @@
 {
   "component": true,
   "usingComponents": {
+    "s-counter": "../counter/index",
+    "s-checkbox": "../checkbox/index",
+    "l-slide-view": "../../miniprogram_npm/lin-ui/slide-view/index"
   }
 }

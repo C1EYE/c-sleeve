@@ -3,7 +3,7 @@ import {ShoppingWay} from "../../core/enum";
 Component({
     properties: {
         orderWay: String,
-
+        cartItemCount: Number
     },
     data: {},
     methods: {

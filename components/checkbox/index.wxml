@@ -1,0 +1,3 @@
+<view bind:tap="onChecked" class="container {{checked?'bg-checked':'bg-unchecked'}}">
+    <l-icon wx:if="{{checked}}" name="check" size="28" l-class="sleeve"></l-icon>
+</view>

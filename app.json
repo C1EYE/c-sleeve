@@ -6,7 +6,8 @@
     "pages/category/category",
     "pages/cart/cart",
     "pages/search/search",
-    "pages/spu-list/spu-list"
+    "pages/spu-list/spu-list",
+    "pages/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -66,6 +67,8 @@
     "l-button": "miniprogram_npm/lin-ui/button/index",
     "l-search-bar": "/miniprogram_npm/lin-ui/search-bar/index",
     "s-spu-preview-r": "/components/spu-preview-r/index",
-    "l-loading": "miniprogram_npm/lin-ui/loading/index"
+    "l-loading": "miniprogram_npm/lin-ui/loading/index",
+    "s-empty": "/components/empty/index",
+    "s-order-sku-item": "/components/order-sku-item/index"
   }
 }

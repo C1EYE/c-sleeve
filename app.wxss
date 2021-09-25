@@ -4,9 +4,9 @@ page {
 
 @font-face {
     font-family: 'sleeve';  /* Project id 2797716 */
-    src: url('//at.alicdn.com/t/font_2797716_q7lvwzfdkpe.woff2?t=1631072014664') format('woff2'),
-    url('//at.alicdn.com/t/font_2797716_q7lvwzfdkpe.woff?t=1631072014664') format('woff'),
-    url('//at.alicdn.com/t/font_2797716_q7lvwzfdkpe.ttf?t=1631072014664') format('truetype');
+    src: url('//at.alicdn.com/t/font_2797716_pdgcsfms45m.woff2?t=1631585355453') format('woff2'),
+    url('//at.alicdn.com/t/font_2797716_pdgcsfms45m.woff?t=1631585355453') format('woff'),
+    url('//at.alicdn.com/t/font_2797716_pdgcsfms45m.ttf?t=1631585355453') format('truetype');
 }
 
 .sleeve {
@@ -20,4 +20,8 @@ page {
 
 .l-icon-share:before {
     content: "\e619";
+}
+
+.l-icon-check:before {
+    content: "\e60a";
 }

@@ -1,5 +1,34 @@
 <view wx:if="!isEmpty" class="container">
-    <block wx:wx:for="{{cartitems}}">
-        <s-cart-item bind:overflow="onOverflow" bind:itemdelete="onItemDelete"></s-cart-item>
+    <block wx:for="{{cartItems}}" wx:key="index">
+        <s-cart-item bind:countfloat="onCountFloat" bind:overflow="onOverflow" bind:itemdelete="onItemDelete"
+                     bind:itemcheck="onSingleCheck" cartItem="{{item}}"></s-cart-item>
     </block>
+</view>
+
+<view class="empty-container" wx:if="{{isEmpty}}">
+    <s-empty show-btn show text="嘛也么有" btn-text="看看别的" bind:tap="onSearch"></s-empty>
+</view>
+
+<view wx:if="{{!isEmpty}}" class="total-container">
+    <view class="data-container">
+        <view class="checkbox-container">
+            <s-checkbox bind:check="onCheckAll" checked="{{allChecked}}"></s-checkbox>
+            <text>全选</text>
+        </view>
+        <view class="price-container">
+            <text>合计</text>
+            <l-price value="{{totalPrice}}"
+                     color="#157658"
+                     count-size="32"
+                     unit-size="32">
+            </l-price>
+        </view>
+    </view>
+    <view bind:tap="onSettle" class="settlement-btn {{totalSkuCount===0?'disabled':''}}">
+        <text>结算 ( {{totalSkuCount}} )</text>
+    </view>
+</view>
+
+<view style="height: 100rpx">
+
 </view>

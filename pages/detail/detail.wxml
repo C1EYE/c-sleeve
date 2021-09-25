@@ -39,6 +39,7 @@
 </l-popup>
 
 <s-tabbar class="tabbar"
+          cartItemCount="{{cartItemCount}}"
           bind:gotohome="onGotoHome"
           bind:gotocart="onGotoCart"
           bind:addtocart="onAddToCart"
